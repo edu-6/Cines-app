@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   selector: 'app-inicio-sesion',
   imports: [ReactiveFormsModule],
   templateUrl: './inicio-sesion.html',
-  styleUrl: './inicio-sesion.css'
 })
 export class InicioSesion {
   newEventForm!: FormGroup;
