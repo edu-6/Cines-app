@@ -1,1 +1,54 @@
-<p>nuevo-usuario-form works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <form class=" border rounded p-4 shadow-sm bg-light" [formGroup]="newEventForm" (submit)="submit()">
+
+        <div class="mb-3">
+          <label for="inputAddress"  class="form-label">Nombre</label>
+          <input type="text" formControlName="nombre" class="form-control" id="inputAddress" placeholder="Nombre"
+            [class.is-invalid]="newEventForm.controls['nombre'].dirty && newEventForm.controls['nombre'].invalid">
+          @if (newEventForm.controls['nombre'].invalid && newEventForm.controls['nombre'].touched) {
+          <div class="invalid-feedback">
+            <div>
+              Por favor rellene el campo
+            </div>
+          </div>
+          }
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+
+            <label for="inputEmail4" class="form-label">Correo</label>
+            <input type="email" class="form-control" formControlName="correo" id="inputEmail4" placeholder="correo"
+              [class.is-invalid]="newEventForm.controls['correo'].dirty && newEventForm.controls['correo'].invalid">
+
+            @if (newEventForm.controls['correo'].invalid && newEventForm.controls['correo'].touched) {
+            <div class="invalid-feedback">
+              <div>
+                Por favor rellene el campo
+              </div>
+            </div>
+            }
+
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4"  class="form-label">contraseña</label>
+            <input type="password"  formControlName="contraseña" class="form-control" id="inputPassword4" placeholder="contraseña"
+              [class.is-invalid]="newEventForm.controls['contraseña'].dirty && newEventForm.controls['contraseña'].invalid">
+
+            @if (newEventForm.controls['contraseña'].invalid && newEventForm.controls['contraseña'].touched) {
+            <div class="invalid-feedback">
+              <div>
+                Por favor rellene el campo
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+      </form>
+    </div>
+  </div>
+</div>
