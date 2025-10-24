@@ -1,0 +1,7 @@
+CREATE DATABASE cinesdb;
+
+CREATE TABLE cine (
+    nombre VARCHAR(100) NOT NULL,
+    codigo VARCHAR(50) NOT NULL,
+    costo_ocultacion_anuncios DOUBLE(10,2)
+);
